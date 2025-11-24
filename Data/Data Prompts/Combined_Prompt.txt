@@ -1,0 +1,38 @@
+Generate 2 CSV files with the following context:
+
+Generate 100,000 records
+
+Customer Gen Data:
+customer_id: unique number between 1 and 100,000, do not repeat
+clv_decile:between 1 and 10 (10% of the total for each value)
+churn_risk is either 0 or 1 (with 2% of subscribers being 1)
+current_bb_speed:the current broadband speed, speeds below 500mb, is considered as "Copper" - that will
+comprise of 10%, 32% of data should be 500mb, 35% should be 1 Gig, 20% should be 2 Gig
+network_activity_ heavy, medium, light (25% is heavy, 50% is medium, 25% is light)
+account_tensure: the age of the account ranging between 1 and 120 months
+time_of_last_broadband_upgrade: a date ranging between 1/1/2016 and 11/01/2025
+broadband_type: customers with "Copper" speed will have a "Copper" broadband_type all remaining customers will have Fiber broadband_type
+customer_segment: Asipirational Adopters - 6%, Peak Performers - 22%, Budget Balancers - 14%, Foolproof Followers - 21%, Settled Simplifiers - 36%
+
+
+
+Device Data Prompt:
+customer_id: 50,000 of the customers will have only 1 unique serial_number, the reaminain 50,000 customer_ids will have more than 1 serial_number, at most a customer_id will have 3 serial_numbers associated
+device_model: the only rule is that the devcice model attribute has a maximum broadband speed of the following:
+    Eero 6: copper only
+    Eero 6+: Fiber speeds up to 500 Mbps
+    Eero Pro 6: Fiber speeds up to 1 Gig
+    Eero Pro 6E: Fiber speeds up to 2 Gig
+    There may be some customers at lower speeds than the maximum the device supports (make sure to account for this to increase realisticness of the data)
+device_status: Provisioned(60%), CustShipped(5%), PendingReturn(10%), StockShelved(25%)
+isp: Frontier Communications(90%), Not Frontier ISP(10%)
+ship_date: a date between October 2021 to Decemeber 2022
+last_alive_date: 60% of the value will be the current date (11/17/25), the remaining 40% will be a random date within the last 5 years, with a bias towards the current date (11/17/25)
+sqs_score: 0-3, 90% of the data is 3, 7% is 2, 2.5% is 1, 0.5% is 0
+serial_number: that is 10 digits long, randomized, must be unique
+
+
+
+You will need to understand the context between the device data and customer data to make sure everything is as realistic as possilbe
+
+

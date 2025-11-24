@@ -1,0 +1,13 @@
+Generate 300,000 records
+
+Customer Gen Data:
+customer_id: unique number between 1 and 200,000, do not repeat
+clv_decile:between 1 and 10 (10% of the total for each value)
+churn_risk is either 0 or 1 (with 2% of subscribers being 1)
+current_bb_speed:the current broadband speed, speeds below 500mb, is considered as "Copper" - that will
+comprise of 10%, 32% of data should be 500mb, 35% should be 1 Gig, 20% should be 2 Gig
+network_activity_ heavy, medium, light (25% is heavy, 50% is medium, 25% is light)
+account_tensure: the age of the account ranging between 1 and 120 months
+time_of_last_broadband_upgrade: a date ranging between 1/1/2016 and 11/01/2025
+broadband_type: customers with "Copper" speed will have a "Copper" broadband_type all remaining customers will have Fiber broadband_type
+customer_segment: Asipirational Adopters - 6%, Peak Performers - 22%, Budget Balancers - 14%, Foolproof Followers - 21%, Settled Simplifiers - 36%

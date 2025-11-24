@@ -1,0 +1,15 @@
+Device Data Prompt:
+customer_id: unique number between 1 and 200,000, all id must be assigned, a id cannot repeat more than 6 times, skew towards 2 devices, all combinations (1,2,3,4,5,6) must be used
+device_model: the only rule is that the devcice model attribute has a maximum broadband speed of the following:
+    Eero 6: copper only
+    Eero 6+: Fiber speeds up to 500 Mbps
+    Eero Pro 6: Fiber speeds up to 1 Gig
+    Eero Pro 6E: Fiber speeds up to 2 Gig
+    There may be some customers at lower speeds than the maximum the device supports (make sure to account for this to increase realisticness of the data)
+device_status: Provisioned(60%), CustShipped(5%), PendingReturn(10%), StockShelved(25%)
+isp: Frontier Communications(90%), Not Frontier ISP(10%)
+ship_date: a date between October 2021 to Decemeber 2022
+last_alive_date: 60% of the value will be the current date (11/17/25), the remaining 40% will be a random date within the last 5 years, with a bias towards the current date (11/17/25)
+sqs_score: 0-3, 90% of the data is 3, 7% is 2, 2.5% is 1, 0.5% is 0
+serial_number: that is 10 digits long, randomized, must be unique
+
