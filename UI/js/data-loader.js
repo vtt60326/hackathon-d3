@@ -17,19 +17,19 @@ const DataLoader = {
             console.log('Starting to load data files...');
             
             console.log('Loading customer_data.csv...');
-            const customerData = await this.loadCSV('/Data/Data Output/customer_data.csv');
+            const customerData = await this.loadCSV('../Data/Data Output/customer_data.csv');
             console.log(`✓ Loaded ${customerData.length} customer records`);
             
             console.log('Loading device_data.csv...');
-            const deviceData = await this.loadCSV('/Data/Data Output/device_data.csv');
+            const deviceData = await this.loadCSV('../Data/Data Output/device_data.csv');
             console.log(`✓ Loaded ${deviceData.length} device records`);
             
             console.log('Loading nba_data.csv...');
-            const nbaData = await this.loadCSV('/Data/Data Output/nba_data.csv');
+            const nbaData = await this.loadCSV('../Data/Data Output/nba_data.csv');
             console.log(`✓ Loaded ${nbaData.length} NBA records`);
             
             console.log('Loading viz_data.csv...');
-            const vizData = await this.loadCSV('/Data/Data Output/viz_data.csv');
+            const vizData = await this.loadCSV('../Data/Data Output/viz_data.csv');
             console.log(`✓ Loaded ${vizData.length} viz records`);
             
             this.customerData = customerData;
@@ -152,4 +152,3 @@ const DataLoader = {
 
 // Export for use in other modules
 window.DataLoader = DataLoader;
-
